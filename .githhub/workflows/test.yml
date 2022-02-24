@@ -30,10 +30,10 @@ on:
         run: |
           pip install pipenv
           pipenv sync -d
-          pipenv pytest
       - name: Rodar flake8
         run: |
           pipenv flake8 .
+          pipenv pytest --cov=pypro
       - name: Codecov
         env:
           CODECOV_TOKEN: '41bc463b-1963-441c-aa75-8cc3bdf275ef'
